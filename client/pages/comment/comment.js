@@ -1,7 +1,9 @@
-// pages/comment/comment.js
+/** pages/comment/comment.js **/
 
-const app = getApp();
+// 获取服务器接口地址
 const api = require('../../config/config.js');
+// 获取app应用实例
+const app = getApp();
 
 Page({
 
@@ -13,7 +15,9 @@ Page({
         comment: ''
     },
 
-    // 用户输入评论
+    /**
+     * 用户输入评论
+     */
     inputComment: function(ev) {
         let that = this;
         that.setData({
@@ -21,17 +25,25 @@ Page({
         });
     },
 
+    /**
+     * 检查输入是否为空
+     */
     checkEmpty: function(input) {
         return input === '';
     },
 
-    // 检查用户是否输入了非法字符
+    /**
+     *  检查用户是否输入了非法字符
+     */
     checkIllegal: function(input) {
         let patern = /[`#^<>:"?{}\/;'[\]]/im;
         let _result = patern.test(input);
         return _result;
     },
 
+    /**
+     * 检查用户输入
+     */
     checkUserInput: function() {
         /*
          * 检测用户输入
@@ -63,10 +75,17 @@ Page({
         }
     },
 
+    /**
+     * 提交评论内容
+     */
     submitComment: function(ev) {
+        
         let that = this;
+        
         let formId = ev.detail.formId;
+        
         if (that.checkUserInput()) {
+
             console.log('submit!');
 
             let requestData = {
@@ -81,7 +100,7 @@ Page({
                 method: 'POST',
                 data: requestData,
                 success: function(res) {
-
+                    // 接口返回成功
                     if (res.data.result == 0) {
                         that.showInfo('评论成功', 'success', function() {
                             wx.setStorageSync('isFromBack', '1');
@@ -105,7 +124,9 @@ Page({
     },
 
 
-    // 封装 wx.showToast
+    /**
+     *  封装 wx.showToast
+     */
     showInfo: function(info, icon = 'none', callback = () => {}) {
         wx.showToast({
             title: info,
@@ -138,13 +159,13 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function() {
-
+        console.log('current page is onReady');
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-
+        console.log('current page is onShow');
     }
 });

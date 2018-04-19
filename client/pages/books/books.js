@@ -1,7 +1,9 @@
 // pages/books/books.js
 
-const app = getApp();
+// 获取服务器接口地址
 const api = require('../../config/config.js');
+// 获取app应用实例
+const app = getApp();
 
 
 Page({
@@ -10,14 +12,14 @@ Page({
      * 页面的初始数据
      */
     data: {
-        bookList: [],
-        indicatorDots: false,
-        autoplay: false,
-        interval: 5000,
-        duration: 1000,
-        circular: true,
-        sideMargin: '100rpx',
-        showLoading: true
+        bookList: [],           // 书籍列表数组
+        indicatorDots: false,   // 是否显示轮播指示点
+        autoplay: false,        // 是否自动播放轮播
+        interval: 5000,         // 轮播间隔
+        duration: 1000,         // 轮播播放延迟
+        circular: true,         // 是否采用衔接滑动
+        sideMargin: '100rpx',   // 幻灯片前后边距
+        showLoading: true       // 是否显示loading态
     },
 
     /**
@@ -26,6 +28,7 @@ Page({
     goDetail: function(ev) {
 
         let info = ev.currentTarget.dataset;
+
         let navigateUrl = '../detail/detail?';
 
         for (let key in info) {
@@ -44,7 +47,9 @@ Page({
      * 获取所有书籍列表
      */
     getBookList: function() {
+        
         let that = this;
+
         wx.request({
             url: api.getBooksUrl,
             data: {
@@ -82,14 +87,14 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function() {
-
+        console.log('current page is onReady');
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-
+        console.log('current page is onShow');
     },
 
     /**
@@ -106,9 +111,11 @@ Page({
             imageUrl: '/images/bookstore.png',
             success: function (res) {
                 // 转发成功
+                console.log('转发成功');
             },
             fail: function (res) {
                 // 转发失败
+                console.log('转发失败')
             }
         }
     }

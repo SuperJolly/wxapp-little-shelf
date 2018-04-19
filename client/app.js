@@ -47,14 +47,13 @@ App({
             success: function (loginRes) {
                 if (loginRes.code) {
                     /* 
-                     * 获取用户信息 期望数据如下 
+                     * @desc: 获取用户信息 期望数据如下 
                      *
-                     * userInfo       [Object]
-                     * rawData        [String]
-                     * signature      [String]
-                     * encryptedData  [String]
-                     * iv             [String]
-                     *
+                     * @param: userInfo       [Object]
+                     * @param: rawData        [String]
+                     * @param: signature      [String]
+                     * @param: encryptedData  [String]
+                     * @param: iv             [String]
                      **/
                     wx.getUserInfo({
 
