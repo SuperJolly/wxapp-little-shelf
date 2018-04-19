@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="user-container bg-white">
+    
+    <view class="userinfo">
+        
+        <block wx:if="{{!hasLogin}}">
+            <image class="userinfo-avatar" src="../../images/login.png" background-size="cover" catchtap="doLogin"></image>
+            <text class="userinfo-nickname">点击登录</text>
+        </block>
+        
+        <block wx:else>
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+
+    </view>
+
+</view>
+
+
+
+<view class="tab-container bg-white">
+
+    <view class="tab-item border-bottom">
+        <view>
+            <image src="../../images/luckyCoin.png" mode="aspectFit" class="tab-icon"></image>
+            <text class="tab-text">积分</text>
+        </view>
+        
+        <text class="tab-text" wx:if="{{hasLogin}}">{{userInfo.balance}}</text>
+        <text class="tab-text" wx:else></text>
+    </view>
+
+    <view class="tab-item" hover-class="tab-item-hover" catchtap="goMyBooks">
+        <view>
+            <image src="../../images/bought.png" mode="aspectFit" class="tab-icon"></image>
+            <text class="tab-text">已购</text>
+        </view>
+        
+        <view class="tab-arrow"></view>
+    </view>
+</view>

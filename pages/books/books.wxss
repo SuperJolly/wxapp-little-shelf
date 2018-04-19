@@ -1,0 +1,85 @@
+/* pages/books/books.wxss */
+
+.swiper-container {
+	/*border: 1px solid red;*/
+	box-sizing: border-box;
+	padding: 120rpx 0 50rpx 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper {
+	width: 750rpx;
+	height: 800rpx;
+}
+
+.swiper-item {
+	/*border: 1px solid blue;*/
+	/* 宽高自动设为100% */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.book-container {
+	border: 1px solid #e6e6e6;
+	width: 480rpx;
+	height: 720rpx;
+
+	padding: 30rpx 20rpx;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	border-radius: 20rpx;
+	box-shadow: 0 0 10rpx #dbdbdb;
+}
+
+.book-container-hover {
+	transform: scale(0.96,0.96);
+  	transition: all 1 ease 0;
+}
+
+.book-image {
+	/*border: 1px solid #cdcdcd;*/
+	/*box-shadow: 0 0 10rpx #dcdcdc;*/
+}
+
+.book-image > image {
+	width: 350rpx;
+}
+
+.book-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	/*border: 1px solid black;*/
+	margin-top: 20rpx;
+}
+
+.book-name {
+	color: #1e1e1e;
+	font-size: 35rpx;
+	margin-bottom: 8rpx;
+}
+
+.author {
+	color: #8a8a8a;
+	font-size: 30rpx;
+	margin-bottom: 8rpx;
+}
+
+.publisher {
+	color: #cdcdcd;
+	font-size: 30rpx;
+}
+
+.donut-container {
+	padding-top: 200rpx;
+}

@@ -1,0 +1,156 @@
+/* pages/detail/detail.wxss */
+
+.book-container {
+	/*border: 1px solid black;*/
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 50rpx 30rpx;
+}
+
+.book-info {
+	/*border: 1px solid red;*/
+
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.book-image {
+	width: 200rpx;
+	height: 300rpx;
+
+	box-shadow: 0 0 10rpx #cdcdcd;
+}
+
+
+.book-desc {
+	/*border: 1px solid yellow;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	padding-left: 30rpx;
+}
+
+.book-main-text {
+	color: #1e1e1e;
+	font-size: 35rpx;
+}
+
+.book-text {
+	color: #8a8a8a;
+	font-size: 30rpx;
+}
+
+.button-area {
+	/*border: 1px solid blue;*/
+}
+
+.button-area > button {
+	font-size: 30rpx;
+}
+
+
+.comment-container {
+	padding-top: 30rpx;
+}
+
+.comment-title {
+	/*border: 1px solid black;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-bottom: 30rpx;
+}
+
+.comment-title > text {
+	font-size: 30rpx;
+	color: #cdcdcd;
+}
+
+.comment-area {
+	/*border: 1px solid black;*/
+
+	padding: 20rpx 30rpx;
+}
+
+.comment-item {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	margin-bottom: 20rpx;
+}
+
+.comment-placeholder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: #dcdcdc;
+}
+
+.comment-item:last-child {
+	margin-bottom: 180rpx;
+}
+
+.avatar-container {
+	width: 80rpx;
+	height: 80rpx;
+	margin-right: 20rpx;
+}
+
+.user-avatar {
+	width: 80rpx;
+	height: 80rpx;
+
+	/*border: 1px solid red;*/
+
+}
+
+.comment-content {
+	display: flex;
+	max-width: 590rpx;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.user-name {
+	color: #8a8a8a;
+	font-size: 30rpx;
+}
+
+.user-comment {
+	display: inline-block;
+	margin-top: 10rpx;
+	color: #1e1e1e;
+	font-size: 35rpx;
+}
+
+.comment-time {
+	display: inline-block;
+	margin-top: 10rpx;
+	color: #cdcdcd;
+	font-size: 20rpx;
+}
+
+.comment-loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loading-container {
+	width: 250rpx;
+	color: #cdcdcd;
+	margin-top: 30rpx;
+}

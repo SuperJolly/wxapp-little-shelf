@@ -1,0 +1,87 @@
+<!--pages/detail/detail.wxml-->
+<view>
+	
+	<view class="book-container bg-white">
+
+		<view class="book-info">
+			<image class="book-image" mode="scaleToFill" src="{{bookInfo.image}}"></image>
+
+			<view class="book-desc">
+				<text class="book-main-text">{{bookInfo.name}}</text>
+				<text class="book-text">{{bookInfo.author}}</text>
+				<text class="book-text">{{bookInfo.publisher}}</text>
+
+				<!-- 下载进度条 -->
+				<view class="loading-container" wx:if="{{downloading}}">
+					<progress 
+						percent="{{downloadPercent}}" 
+						stroke-width="6" 
+						activeColor="#1aad19" 
+						backgroundColor="#cdcdcd" 
+						show-info 
+					/>
+				</view>
+			</view>
+		</view>
+
+		<view class="button-area">
+
+			<block wx:if="{{downloading}}">
+				<view class="donut"></view>
+			</block>
+			
+			<block wx:else>
+				<button type="default" catchtap="readBook" wx:if="{{bookIsBuy == 1}}">打开</button>
+				<button type="primary" catchtap="confirmBuyBook" wx:if="{{bookIsBuy == 0}}">兑换</button>
+			</block>
+			
+		</view>
+
+	</view>
+
+	<view class="comment-container">
+		<view class="comment-title">
+			<text>--------- 评论 ---------</text>
+		</view>
+
+
+		<view class="comment-loading" wx:if="{{commentLoading}}">
+			<view class="donut"></view>
+		</view>
+
+		<view class="comment-area" wx:else>
+			
+			<block wx:if="{{commentList.length > 0}}">
+				<view class="comment-item" wx:for="{{commentList}}" wx:key="index">
+					<view class="avatar-container">
+						<image mode="scaleToFill" src="{{item.uavatar}}" class="user-avatar"></image>
+					</view>
+
+					<view class="comment-content">
+						<text class="user-name">{{item.uname}}</text>
+						<text class="user-comment">{{item.ccontent}}</text>
+						<text class="comment-time">{{item.ctime}}</text>
+					</view>
+				</view>
+			</block>
+
+			<block wx:else>
+				<view class="comment-placeholder">来当第一个评论的人吧～</view>
+			</block>
+			
+
+		</view>
+	</view>
+
+
+	<!-- bottom button -->
+    <view class="fixed-bottom block-full-width flex-container bg-white">
+		<button 
+			class="full-button" 
+			type="primary" 
+			catchtap="goComment" 
+			data-id="{{bookInfo.id}}" 
+			data-name="{{bookInfo.name}}"
+		> 写评论 </button>
+    </view>
+</view>

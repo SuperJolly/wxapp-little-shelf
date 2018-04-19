@@ -1,0 +1,102 @@
+/* pages/myBooks/myBooks.wxss */
+
+.loading-container {
+	display: flex;
+	padding-top: 400rpx;
+	justify-content: center;
+	align-items: center;
+}
+
+.book-container {
+	display: flex;
+	box-sizing: border-box;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*justify-content: space-between;*/
+	align-content: space-between;
+	/*border: 1px solid black;*/
+
+	padding: 50rpx 0;
+}
+
+.book {
+	margin: 0 18rpx;
+	margin-bottom: 50rpx;
+	width: 208rpx;
+	height: 380rpx;
+	/*border: 1px solid #dbdbdb;*/
+	box-shadow: 0 0 15rpx #cdcdcd;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	border-radius: 10rpx;
+}
+
+.book-hover {
+	transform: scale(0.96,0.96);
+  	transition: all 1 ease 0;
+}
+
+.book-image {
+	width: 100%;
+	height: 300rpx;
+}
+
+.book-image > image {
+	width: 100%;
+	height: 300rpx;
+}
+
+.book-name {
+	margin-top: 10rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.book-name > text {
+	color: #1e1e1e;
+	font-size: 25rpx;
+}
+
+.empty-container {
+	color: #cdcdcd;
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	padding-top: 300rpx;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.full-loading {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 999;
+	background-color: rgba(0,0,0,0.5);
+
+	color: white;
+	font-size: 25rpx;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.full-loading > view {
+	width: 66.7%;
+}

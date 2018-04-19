@@ -1,0 +1,15 @@
+/* pages/comment/comment.wxss */
+.comment-container {
+	display: flex;
+	flex-direction: column;
+	padding: 20rpx 0;
+}
+
+.book-name {
+	padding: 10rpx 30rpx;
+}
+
+.comment-area {
+	margin-top: 20rpx;
+	padding: 20rpx 30rpx;
+}

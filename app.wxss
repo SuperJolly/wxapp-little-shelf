@@ -1,0 +1,81 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100rpx 0;
+  box-sizing: border-box;
+  /*border: 1px solid green;*/
+}
+
+page {
+  background-color: #f2f2f2;
+}
+
+.bg-white {
+	background-color: #ffffff;
+}
+
+.image-icon {
+	width: 30rpx;
+	height: 30rpx;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #dbdbdb;
+}
+
+/* 修正 text 组件 英文&符号不换行的问题  begin */
+text {
+	word-wrap: break-all;
+	word-break: break-word;
+	text-align: justify;
+}
+/* 修正 text 组件 英文&符号不换行的问题  end */
+
+
+.fixed-bottom{
+	position: fixed;
+	bottom: 0rpx;
+	left: 0rpx;
+	box-shadow: 0 -5rpx 20rpx #c9c9c9;
+}
+
+.block-full-width{
+	display: block;
+	width: 100%;
+	height: 150rpx;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.full-button {
+	width: 80%;
+}
+
+/*甜甜圈loading start*/
+@keyframes donut-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.donut {
+  display: inline-block;
+  border: 4rpx solid rgba(0, 0, 0, 0.1);
+  border-left-color: #1AAD19;
+  border-radius: 50%;
+  width: 60rpx;
+  height: 60rpx;
+  animation: donut-spin 0.5s linear infinite;
+}
+/*甜甜圈loading end*/

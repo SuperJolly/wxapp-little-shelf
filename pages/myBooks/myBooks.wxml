@@ -1,0 +1,49 @@
+<!--pages/myBooks/myBooks.wxml-->
+
+<view class="loading-container" wx:if="{{showLoading}}">
+	<view class="donut-container">
+		<view class="donut"></view>
+	</view>
+</view>
+
+
+<view class="book-container" wx:else>
+	<block wx:if="{{bookList.length > 0}}">
+		<block wx:for="{{bookList}}" wx:key="index">
+			<view class="book bg-white" hover-class="book-hover" data-id="{{item.bkid}}" data-file="{{item.bkfile}}" catchtap="readBook">
+				<view class="book-image">
+					<image src="{{item.bkcover}}" mode="scaleToFill"></image>
+				</view>
+				<view class="book-name">
+					<text>{{ item.bkname }}</text>
+				</view>
+			</view>
+		</block>
+	</block>
+
+	<block wx:else>
+		<view class="empty-container">
+			<image class="userinfo-avatar" src="../../images/sad.png" background-size="cover"></image>
+			<view class="donut-container">空空如也</view>
+		</view>
+	</block>
+</view>
+
+
+<!-- 下载书籍时的loading浮层 -->
+<view class="full-loading" wx:if="{{showDownloading}}">
+
+	<text>书籍下载中...</text>
+	<view>
+		<progress 
+			percent="{{downloadPercent}}" 
+			stroke-width="6" 
+			activeColor="#1aad19" 
+			backgroundColor="#cdcdcd" 
+			show-info 
+			active 
+			active-mode="forwards"
+		/>
+	</view>
+	
+</view>
