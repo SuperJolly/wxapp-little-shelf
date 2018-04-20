@@ -4,43 +4,43 @@
 
 #### 目录结构
 
-├── config
-│    └── config.js
-├── images
-├── pages
-│    ├── books
-│    │    ├── books.js
-│    │    ├── books.json
-│    │    ├── books.wxml
-│    │    └── books.wxss
-│    ├── comment
-│    │    ├── comment.js
-│    │    ├── comment.js
-│    │    ├── comment.js
-│    │    └── comment.wxss
-│    ├── detail
-│    │    ├── detail.js
-│    │    ├── detail.js
-│    │    ├── detail.js
-│    │    └── detail.wxss
-│    ├── my
-│    │    ├── my.js
-│    │    ├── my.js
-│    │    ├── my.js
-│    │    └── my.wxss
-│    └── myBooks   
-│         ├── myBooks.js
-│         ├── myBooks.js
-│         ├── myBooks.js
-│         └── myBooks.wxss
-├── utils
-│    └── util.js
-├── app.js
-├── app.json
-├── app.wxss
-├── project.config.json
+    ├── config
+    │    └── config.js
+    ├── images
+    ├── pages
+    │    ├── books
+    │    │    ├── books.js
+    │    │    ├── books.json
+    │    │    ├── books.wxml
+    │    │    └── books.wxss
+    │    ├── comment
+    │    │    ├── comment.js
+    │    │    ├── comment.js
+    │    │    ├── comment.js
+    │    │    └── comment.wxss
+    │    ├── detail
+    │    │    ├── detail.js
+    │    │    ├── detail.js
+    │    │    ├── detail.js
+    │    │    └── detail.wxss
+    │    ├── my
+    │    │    ├── my.js
+    │    │    ├── my.js
+    │    │    ├── my.js
+    │    │    └── my.wxss
+    │    └── myBooks   
+    │         ├── myBooks.js
+    │         ├── myBooks.js
+    │         ├── myBooks.js
+    │         └── myBooks.wxss
+    ├── utils
+    │    └── util.js
+    ├── app.js
+    ├── app.json
+    ├── app.wxss
+    └── project.config.json
 
-#### 各页面模块
+#### 各页面模块
 
 | 页面 | 描述 |
 | --- | --- |
