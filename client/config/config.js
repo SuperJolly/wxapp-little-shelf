@@ -8,7 +8,7 @@ const commentUrl 		= baseUrl + 'api/comment/write';
 const queryBookUrl 		= baseUrl + 'api/book/queryBook';
 // 登录接口
 const loginUrl 			= baseUrl + 'login';
-// 获取已购书籍接口
+// 获取当前用户已购书籍接口
 const getBoughtBooksUrl = baseUrl + 'api/user/getBoughtBooks';
 // 兑换书籍接口
 const buyBookUrl = baseUrl + 'api/order/buy';
