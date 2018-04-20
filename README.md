@@ -9,9 +9,9 @@
 * 安装并启动 mysql， 参考文章[Windows 环境下 MySQL 5.7 安装配置指南](https://www.jianshu.com/p/710e5861c198)和[Mac下安装与配置MySQL](https://www.jianshu.com/p/a8e4068a7a8a)
 * 新建数据库，可参考我的这篇文章[手把手教会你小程序登录鉴权](https://juejin.im/post/5ac9b72cf265da23906c486a)来让数据库表支持emoji存储
 * 导入 `db` 目录下的所有数据表
+* 进入 `server` 目录，使用命令 `$ npm install && npm start` (需要先安装nodejs)
 * 将 `client` 目录作为小程序项目根目录，在开发者工具面板上添加项目，并导入该目录
-* 进入 `server` 目录，使用命令 `$ npm install & npm start` (需要先安装nodejs)
-
+* 更改 `client` 相关配置
 #### 导入数据库表
 
 1. 创建并选择数据库
