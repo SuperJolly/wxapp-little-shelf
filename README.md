@@ -10,8 +10,19 @@
 * 新建数据库，可参考我的这篇文章[手把手教会你小程序登录鉴权](https://juejin.im/post/5ac9b72cf265da23906c486a)来让数据库表支持emoji存储
 * 导入 `db` 目录下的所有数据表
 * 进入 `server` 目录，使用命令 `$ npm install && npm start` (需要先安装nodejs)
+* 更改 `client` 下 `conf/app.js` 文件中的 `appid` 和 `secret` ，填入自己小程序对应的 appid 和 小程序密钥
+* 更改 `client` 下 `conf/db.js` 文件中的相关配置，如下：
+
+| 配置参数 | 描述 |
+| ------ | ---- |
+| host | 本地：127.0.0.1，远程：服务器ip |
+| user | 数据库账户 |
+| password | 数据库账户密码 |
+| database | 数据库 |
+| port | 数据库服务端口，默认为3306 |
+
 * 将 `client` 目录作为小程序项目根目录，在开发者工具面板上添加项目，并导入该目录
-* 更改 `client` 相关配置
+
 #### 导入数据库表
 
 1. 创建并选择数据库
