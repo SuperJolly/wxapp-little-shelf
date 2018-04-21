@@ -9,7 +9,7 @@
 * 安装并启动 mysql， 参考文章[Windows 环境下 MySQL 5.7 安装配置指南](https://www.jianshu.com/p/710e5861c198)和[Mac下安装与配置MySQL](https://www.jianshu.com/p/a8e4068a7a8a)
 * 新建数据库，可参考我的这篇文章[手把手教会你小程序登录鉴权](https://juejin.im/post/5ac9b72cf265da23906c486a)来让数据库表支持emoji存储
 * 导入 `db` 目录下的所有数据表
-* 更改 `client` 下 `config/config.js` 文件中的 `baseUrl`，将 `[your port]` 改为数据库服务对应的端口
+* 更改 `client` 下 `config/config.js` 文件中的 `baseUrl`，将 `[your port]` 改为后台服务对应的端口，默认为`3003`
 * 更改 `server` 下 `conf/app.js` 文件中的 `appid` 和 `secret` ，填入自己小程序对应的 appid 和 小程序密钥
 * 更改 `server` 下 `conf/db.js` 文件中的相关配置，如下：
 
