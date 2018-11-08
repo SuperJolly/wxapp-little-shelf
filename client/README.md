@@ -15,23 +15,23 @@
     │    │    └── books.wxss
     │    ├── comment
     │    │    ├── comment.js
-    │    │    ├── comment.js
-    │    │    ├── comment.js
+    │    │    ├── comment.json
+    │    │    ├── comment.wxml
     │    │    └── comment.wxss
     │    ├── detail
     │    │    ├── detail.js
-    │    │    ├── detail.js
-    │    │    ├── detail.js
+    │    │    ├── detail.json
+    │    │    ├── detail.wxml
     │    │    └── detail.wxss
     │    ├── my
     │    │    ├── my.js
-    │    │    ├── my.js
-    │    │    ├── my.js
+    │    │    ├── my.json
+    │    │    ├── my.wxml
     │    │    └── my.wxss
     │    └── myBooks   
     │         ├── myBooks.js
-    │         ├── myBooks.js
-    │         ├── myBooks.js
+    │         ├── myBooks.json
+    │         ├── myBooks.wxml
     │         └── myBooks.wxss
     ├── utils
     │    └── util.js
